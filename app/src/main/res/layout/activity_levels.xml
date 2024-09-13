@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundgral"
+    tools:context=".views.LevelsActivity">
+
+    <TextView
+        android:id="@+id/nivelesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niveles"
+        android:textColor="@android:color/white"
+        android:textSize="45sp"
+        android:fontFamily="@font/agbalumo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/botonInicial"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/inicial_selector"
+        android:text="Inicial"
+        android:fontFamily="@font/adlam_display"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/nivelesTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/botonPreIntermedio"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/adlam_display"
+        android:drawableRight="@drawable/cerrar_llave"
+        android:background="@drawable/preintermedio_selector"
+        android:text="Pre Intermedio"
+        android:enabled="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/botonInicial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/botonIntermedio"
+        android:layout_width="350dp"
+        android:drawableRight="@drawable/cerrar_llave"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/adlam_display"
+        android:background="@drawable/intermedio_selector"
+        android:text="Intermedio"
+        android:enabled="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/botonPreIntermedio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/botonPreAvanzado"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/adlam_display"
+        android:drawableRight="@drawable/cerrar_llave"
+        android:background="@drawable/preavanzado_selector"
+        android:text="Pre Avanzado"
+        android:enabled="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/botonIntermedio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/botonAvanzado"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/adlam_display"
+        android:drawableRight="@drawable/cerrar_llave"
+        android:background="@drawable/avanzado_selector"
+        android:text="Avanzado"
+        android:enabled="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/botonPreAvanzado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/botonExperto"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/adlam_display"
+        android:drawableRight="@drawable/cerrar_llave"
+        android:background="@drawable/experto_selector"
+        android:enabled="false"
+        android:text="Experto"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/botonAvanzado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
