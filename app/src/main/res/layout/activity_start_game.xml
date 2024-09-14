@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundgral"
+    tools:context=".views.StartGame">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/topIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pet"
+        android:contentDescription="Decorative Icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:id="@+id/levelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/agbalumo"
+        android:text="Nivel: Intermedio"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topIcon" />
+
+    <TextView
+        android:id="@+id/motivationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/indie_flower"
+        android:text="¡Estás listo para este desafío!"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/levelText" />
+
+    <ImageView
+        android:id="@+id/completeWords"
+        android:layout_width="113dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/complete_words"
+        app:layout_constraintEnd_toStartOf="@id/bottomIcon"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/motivationText" />
+
+    <ImageView
+        android:id="@+id/bottomIcon"
+        android:layout_width="103dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/choose_options"
+        app:layout_constraintEnd_toStartOf="@id/traductorIcon"
+        app:layout_constraintStart_toEndOf="@id/completeWords"
+        app:layout_constraintTop_toBottomOf="@+id/motivationText" />
+
+    <ImageView
+        android:id="@+id/traductorIcon"
+        android:layout_width="103dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/traductor"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/bottomIcon"
+        app:layout_constraintTop_toBottomOf="@+id/motivationText" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/startbtn_selector"
+        android:fontFamily="@font/adlam_display"
+        android:text="Comenzar"
+        android:textColor="@color/backgroundgral"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/backbtn_selector"
+        android:fontFamily="@font/adlam_display"
+        android:text="Regresar"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

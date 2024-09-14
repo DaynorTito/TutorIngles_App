@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Englishtutor"
         tools:targetApi="31">
         <activity
+            android:name=".views.StartGame"
+            android:exported="false" />
+        <activity
             android:name=".views.LevelsActivity"
             android:exported="true" />
         <activity
