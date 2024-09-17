@@ -1,7 +1,9 @@
 package com.example.englishtutor.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.ComponentActivity
@@ -9,6 +11,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.englishtutor.R
+import com.example.englishtutor.chooseOption.ChooseOptionLogic
+import com.example.englishtutor.chooseOption.OptionToSelect
 
 class StartGame : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,6 +55,21 @@ class StartGame : ComponentActivity() {
             }
         }
 
+        val startBnt: Button = findViewById(R.id.startButton)
+        startBnt.setOnClickListener {
+            val intent = Intent(this, ChooseOption::class.java)
+            intent.putExtra("title", "Escoja la opcion correcta")
+            intent.putExtra("level", levelString)
+
+            intent.putExtra("levelProgress", 10)  // to change if add more exercises
+            val chooseOptionLogic = ChooseOptionLogic(this, levelString)
+            val optionsGame: List<OptionToSelect>  = chooseOptionLogic.generateOptions(10);  // chage to add mor exerc.
+            intent.putExtra("optionsGame", ArrayList(optionsGame))
+
+            val arrayPoints: ArrayList<Int> = ArrayList()
+            intent.putIntegerArrayListExtra("arrayPoints", arrayPoints)
+            startActivity(intent)
+        }
     }
 
     fun getNumImages(level: String) : Int {

@@ -12,6 +12,6 @@
     <color name="button_pressed_color">#4443BC</color>
     <color name="button_disabled_color">#653C3B79</color>
     <color name="button_normal_color">#363570</color>
-
-
+    <color name="correct_ans">#379A00</color>
+    <color name="incorrect_ans">#A81414</color>
 </resources>
