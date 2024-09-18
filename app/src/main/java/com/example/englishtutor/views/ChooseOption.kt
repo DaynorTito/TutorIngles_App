@@ -73,10 +73,10 @@ class ChooseOption : ComponentActivity() {
         val btnSig: Button = findViewById(R.id.buttonSig)
         val btnAnt: Button = findViewById(R.id.buttonAnt)
 
-        goNextScreen(btnSig, levelString, levelProgres, optionsGame, indexScreen, arrayPoints)
+        goNextScreen(btnSig, levelString, levelProgres, optionsGame, indexScreen, arrayPoints, levelString)
     }
 
-    fun goNextScreen(btnSig:Button, level:String, progress:Int, optionsGame: List<OptionToSelect>, indexScreen: Int, arrayPoints:ArrayList<Int>?) {
+    fun goNextScreen(btnSig:Button, level:String, progress:Int, optionsGame: List<OptionToSelect>, indexScreen: Int, arrayPoints:ArrayList<Int>?, levelString: String) {
         btnSig.setOnClickListener {
 
             if (progress == 100) {
@@ -85,6 +85,7 @@ class ChooseOption : ComponentActivity() {
                 endIntentSc.putExtra("percetPoints", percetPoints)
                 if (percetPoints == 100)
                     endIntentSc.putExtra("showConfetti", true)
+                endIntentSc.putExtra("level", levelString)
                 startActivity(endIntentSc)
                 finish()
             } else {

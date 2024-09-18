@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import com.example.englishtutor.views.LevelsActivity
+import com.example.englishtutor.views.StartGame
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("MissingInflatedId")
@@ -20,6 +21,10 @@ class MainActivity : ComponentActivity() {
             val intent = Intent(this, LevelsActivity::class.java)
             startActivity(intent)
         }
+        val exitBoton: Button = findViewById(R.id.exitButton)
 
+        exitBoton.setOnClickListener {
+            finishAffinity()
+        }
     }
 }

@@ -39,6 +39,7 @@ class EndLevel : ComponentActivity() {
         val mainTitle: TextView = findViewById(R.id.textView)
         val messageRec: TextView = findViewById(R.id.textView2)
         val imageShow: ImageView = findViewById(R.id.imageView2)
+        val levelStr: String = intent.getStringExtra("level").orEmpty()
         if (showConfetti) {
             showConfettiEffect()
             mainTitle.text = "Felicidades completaste el nivel con exito!"
@@ -62,6 +63,8 @@ class EndLevel : ComponentActivity() {
         val btnClose: Button = findViewById(R.id.closeBtn)
         btnClose.setOnClickListener {
             val intent = Intent(this, LevelsActivity::class.java)
+            intent.putExtra("level", levelStr)
+            intent.putExtra("isPass", porcentaje)
             startActivity(intent)
             finish()
         }
